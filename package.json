@@ -1,0 +1,24 @@
+{
+  "name": "cerebro-snippets",
+  "version": "0.1.0",
+  "description": "Cerebro plugin to create snippets",
+  "license": "MIT",
+  "dependencies": {
+    "cerebro-tools": "^0.1.8",
+    "cerebro-ui": "^0.0.16",
+    "react-highlight": "^0.10.0"
+  },
+  "devDependencies": {
+    "cerebro-scripts": "0.0.13"
+  },
+  "main": "dist/index.js",
+  "keywords": [
+    "cerebro",
+    "cerebro-plugin"
+  ],
+  "scripts": {
+    "start": "cerebro-scripts start",
+    "build": "cerebro-scripts build",
+    "test": "cerebro-scripts test"
+  }
+}
