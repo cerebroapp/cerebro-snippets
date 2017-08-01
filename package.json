@@ -1,8 +1,13 @@
 {
   "name": "cerebro-snippets",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Cerebro plugin to create snippets",
   "license": "MIT",
+  "repository": "puyt/cerebro-snippets",
+  "author": {
+    "name": "Puyt",
+    "url": "https://github.com/puyt"
+  },
   "dependencies": {
     "cerebro-tools": "^0.1.8",
     "cerebro-ui": "^0.0.16",
@@ -14,7 +19,10 @@
   "main": "dist/index.js",
   "keywords": [
     "cerebro",
-    "cerebro-plugin"
+    "cerebro-plugin",
+    "cerebro-snippets",
+    "snippets",
+    "snip"
   ],
   "scripts": {
     "start": "cerebro-scripts start",
