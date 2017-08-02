@@ -1,11 +1,12 @@
 {
   "name": "cerebro-snippets",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cerebro plugin to create snippets",
   "license": "MIT",
   "repository": "puyt/cerebro-snippets",
   "author": {
     "name": "Puyt",
+    "email": "info@puyt.be",
     "url": "https://github.com/puyt"
   },
   "dependencies": {
@@ -28,5 +29,9 @@
     "start": "cerebro-scripts start",
     "build": "cerebro-scripts build",
     "test": "cerebro-scripts test"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/puyt/cerebro-snippets/issues"
+  },
+  "homepage": "https://github.com/puyt/cerebro-snippets#readme"
 }
