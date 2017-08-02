@@ -3,3 +3,5 @@ node_modules
 screenshot.gif
 screenshot2.gif
 yarn.lock
+snippets
+!**/.gitkeep
