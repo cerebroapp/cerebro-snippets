@@ -62,11 +62,6 @@ const plugin = ({ term, display, actions, settings }) => {
             break;
     }
 
-    // search without keyword "snip"
-    if (settings.disableSearchKeyword && param === '') {
-        results = selectSnippet(snippetsDir, command, actions);
-    }
-
     // add autocomplete for possible commands
     results = [
         ...results,
@@ -88,12 +83,5 @@ const plugin = ({ term, display, actions, settings }) => {
 
 module.exports = {
     fn: plugin,
-    icon: icon,
-    settings: {
-        disableSearchKeyword: {
-            type: "bool",
-            label: 'Search without keyword "snip"',
-            defaultValue: false,
-        }
-    }
+    icon: icon
 };
