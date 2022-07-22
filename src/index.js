@@ -1,11 +1,11 @@
-const { app, clipboard, remote } = require('electron');
-const fs = require('fs');
-const electronApp = remote ? remote.app : app;
+const remote = require('@electron/remote');
+const path = require('path');
 
-const snippetsDir = `${electronApp.getPath('userData')}/plugins/node_modules/cerebro-snippets/snippets/`;
+const snippetsDir = path.join(remote.app.getPath('userData'), 'plugins', 'node_modules', 'cerebro-snippets', 'snippets');
 const icon = require('./icons/icon.png');
 const deleteIcon = require('./icons/deleteIcon.png');
 
+const initialize = require('./lib/initialize');
 const selectSnippet = require('./lib/selectSnippet');
 const createSnippet = require('./lib/createSnippet');
 const deleteSnippet = require('./lib/deleteSnippet');
@@ -87,6 +87,7 @@ const plugin = ({ term, display, actions, settings }) => {
 }
 
 module.exports = {
+    initialize,
     fn: plugin,
     icon: icon,
     settings: {

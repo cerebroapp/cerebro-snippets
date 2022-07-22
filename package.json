@@ -11,11 +11,11 @@
   },
   "dependencies": {
     "cerebro-tools": "^0.1.8",
-    "cerebro-ui": "^0.0.16",
-    "react-highlight": "^0.10.0"
+    "@cerebroapp/cerebro-ui": "^1.0.4",
+    "react-highlight": "^0.14.0"
   },
   "devDependencies": {
-    "cerebro-scripts": "0.0.13"
+    "@cerebroapp/cerebro-scripts": "^1.0.0-alpha.6"
   },
   "main": "dist/index.js",
   "keywords": [

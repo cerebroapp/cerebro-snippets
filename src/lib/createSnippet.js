@@ -1,5 +1,6 @@
 const { clipboard } = require('electron');
 const fs = require('fs');
+const path = require('path');
 
 module.exports = (dir, name) => {
     let title = `Create snippet called "${name}"`;
@@ -12,7 +13,7 @@ module.exports = (dir, name) => {
         onSelect: () => {
             if (name != '') {
                 // create snippet file
-                fs.writeFile(`${dir}${name}`, clipboard.readText(), err => {
+                fs.writeFile(path.join(dir, name), clipboard.readText(), err => {
                     console.log(err);
                 });
             }

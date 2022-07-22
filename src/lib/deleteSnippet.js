@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const searchSnippet = require('./searchSnippet');
 const icon = require('../icons/deleteIcon.png');
 
@@ -10,6 +11,6 @@ module.exports = (dir, query) => {
         title: `Delete snippet "${name}"`,
         icon: icon,
         term: 'snipd',
-        onSelect: () => fs.unlinkSync(`${dir}${name}`)
+        onSelect: () => fs.unlinkSync(path.join(dir, name))
     }));
 }
