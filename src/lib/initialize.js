@@ -1,11 +1,11 @@
 // runs on plugin start --> Create snippets dir so it can be used
-const remote = require('@electron/remote');
-const fs = require('fs');
-const path = require('path');
+import { app } from '@electron/remote';
+import fs from 'fs';
+import path from 'path';
 
-const snippetsDir = path.join(remote.app.getPath('userData'), 'plugins', 'node_modules', 'cerebro-snippets', 'snippets');
+const snippetsDir = path.join(app.getPath('userData'), 'plugins', 'node_modules', 'cerebro-snippets', 'snippets');
 
-module.exports = () => {
+export default () => {
     if (!fs.existsSync(snippetsDir)) {
         fs.mkdirSync(snippetsDir);
     }

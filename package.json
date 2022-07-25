@@ -5,17 +5,18 @@
   "license": "MIT",
   "repository": "puyt/cerebro-snippets",
   "author": {
-    "name": "Puyt",
-    "email": "info@puyt.be",
+    "name": "Sven",
     "url": "https://github.com/puyt"
   },
   "dependencies": {
-    "cerebro-tools": "^0.1.8",
     "@cerebroapp/cerebro-ui": "^1.0.4",
+    "cerebro-tools": "^0.1.8",
     "react-highlight": "^0.14.0"
   },
   "devDependencies": {
-    "@cerebroapp/cerebro-scripts": "^1.0.0-alpha.6"
+    "@cerebroapp/cerebro-scripts": "^1.0.0-alpha.6",
+    "@electron/remote": "^2.0.8",
+    "electron": "^19.0.9"
   },
   "main": "dist/index.js",
   "keywords": [

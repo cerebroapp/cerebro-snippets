@@ -1,10 +1,9 @@
-const fs = require('fs');
-const path = require('path');
-const searchSnippet = require('./searchSnippet');
-const icon = require('../icons/deleteIcon.png');
+import fs from 'fs';
+import path from 'path';
+import icon from '../icons/deleteIcon.png';
+import searchSnippet from './searchSnippet';
 
-module.exports = (dir, query) => {
-    // get snippets
+export default (dir, query) => {
     let snippets = searchSnippet(dir, query);
 
     return snippets.map(name => ({

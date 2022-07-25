@@ -1,14 +1,14 @@
-const remote = require('@electron/remote');
-const path = require('path');
+import { app } from '@electron/remote';
+import path from 'path';
 
-const snippetsDir = path.join(remote.app.getPath('userData'), 'plugins', 'node_modules', 'cerebro-snippets', 'snippets');
-const icon = require('./icons/icon.png');
-const deleteIcon = require('./icons/deleteIcon.png');
+const snippetsDir = path.join(app.getPath('userData'), 'plugins', 'node_modules', 'cerebro-snippets', 'snippets');
+import icon from './icons/icon.png';
+import deleteIcon from './icons/deleteIcon.png';
 
-const initialize = require('./lib/initialize');
-const selectSnippet = require('./lib/selectSnippet');
-const createSnippet = require('./lib/createSnippet');
-const deleteSnippet = require('./lib/deleteSnippet');
+import initialize from './lib/initialize';
+import selectSnippet from './lib/selectSnippet';
+import createSnippet from './lib/createSnippet';
+import deleteSnippet from './lib/deleteSnippet';
 
 const plugin = ({ term, display, actions, settings }) => {
     let results = [];
@@ -70,7 +70,7 @@ const plugin = ({ term, display, actions, settings }) => {
     // add autocomplete for possible commands
     results = [
         ...results,
-        ...commands.filter(item => (command != item.term && item.term.indexOf(command) !== -1))
+        ...commands.filter(item => (command !== item.term && item.term.indexOf(command) !== -1))
     ];
 
     // display results
@@ -86,7 +86,7 @@ const plugin = ({ term, display, actions, settings }) => {
     }
 }
 
-module.exports = {
+export default {
     initialize,
     fn: plugin,
     icon: icon,

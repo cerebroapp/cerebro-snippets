@@ -1,11 +1,9 @@
-require('../styles/preview.css');
-require('!!style-loader!css-loader!../../node_modules/highlight.js/styles/solarized-dark.css');
-const Highlight = require('react-highlight');
+import Highlight from 'react-highlight';
+import '!!style-loader!css-loader!../../node_modules/highlight.js/styles/solarized-dark.css';
+import '../styles/preview.css';
 
-module.exports = (content, ext) => {
-    return (
-        <Highlight className={ext}>
-            {content}
-        </Highlight>
-    );
-}
+export default ({ highlight, content }) => (
+    <Highlight className={highlight}>
+        {content}
+    </Highlight>
+);
