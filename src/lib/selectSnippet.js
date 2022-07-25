@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const preview = require('./preview');
 const searchSnippet = require('./searchSnippet');
 
@@ -6,7 +7,7 @@ module.exports = (dir, query, actions) => {
     // get snippets & their content
     let snippets = searchSnippet(dir, query, actions);
     let fileContent = snippets.reduce((obj, item) => {
-        obj[item] = fs.readFileSync(`${dir}${item}`, 'utf8');
+        obj[item] = fs.readFileSync(path.join(dir, item), 'utf8');
         return obj;
     }, {});
 
