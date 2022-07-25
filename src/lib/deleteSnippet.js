@@ -1,15 +1,15 @@
-const fs = require('fs');
-const searchSnippet = require('./searchSnippet');
-const icon = require('../icons/deleteIcon.png');
+import fs from 'fs';
+import path from 'path';
+import icon from '../icons/deleteIcon.png';
+import searchSnippet from './searchSnippet';
 
-module.exports = (dir, query) => {
-    // get snippets
+export default (dir, query) => {
     let snippets = searchSnippet(dir, query);
 
     return snippets.map(name => ({
         title: `Delete snippet "${name}"`,
         icon: icon,
         term: 'snipd',
-        onSelect: () => fs.unlinkSync(`${dir}${name}`)
+        onSelect: () => fs.unlinkSync(path.join(dir, name))
     }));
 }

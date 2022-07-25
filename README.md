@@ -1,6 +1,6 @@
 # cerebro-snippets
 
-> [Cerebro](http://www.cerebroapp.com) plugin to create snippets
+> [Cerebro](https://www.cerebroapp.com) plugin to create snippets
 
 ![](screenshot1.gif)
 
@@ -24,7 +24,7 @@ Creating a snippet with a file extension will add syntax highlighting for that s
 
 ## Related
 
-- [Cerebro](https://github.com/KELiON/cerebro) - main repo for Cerebro app
+- [Cerebro](https://github.com/cerebroapp/cerebro) - main repo for Cerebro app
 - [Highlight.js](https://highlightjs.org/)
 - [React-highlight](https://github.com/akiran/react-highlight)
 

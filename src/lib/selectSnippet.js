@@ -1,21 +1,28 @@
-const fs = require('fs');
-const preview = require('./preview');
-const searchSnippet = require('./searchSnippet');
+import fs from 'fs';
+import path from 'path';
+import Preview from './preview';
+import searchSnippet from './searchSnippet';
 
-module.exports = (dir, query, actions) => {
-    // get snippets & their content
+export default (dir, query, actions) => {
     let snippets = searchSnippet(dir, query, actions);
     let fileContent = snippets.reduce((obj, item) => {
-        obj[item] = fs.readFileSync(`${dir}${item}`, 'utf8');
+        obj[item] = fs.readFileSync(path.join(dir, item), 'utf8');
         return obj;
     }, {});
 
-    return snippets.map(name => ({
-        title: name,
-        subtitle: 'copy content to clipboard',
-        term: 'snip',
-        clipboard: fileContent[name],
-        onSelect: (ev) => actions.copyToClipboard(fileContent[name]),
-        getPreview: () => preview(fileContent[name], (name.includes('.') ? name.split('.').pop() : 'nohighlight'))
-    }));
+    return snippets.map((name) => {
+        const previewHighlight = name.includes('.') ? name.split('.').pop() : 'nohighlight';
+        const previewContent = fileContent[name] || '';
+
+        return {
+            title: name,
+            subtitle: 'copy content to clipboard',
+            term: 'snip',
+            clipboard: previewContent,
+            onSelect: () => actions.copyToClipboard(previewContent),
+            getPreview: () => (
+                <Preview highlight={ previewHighlight } content={ previewContent } />
+            ),
+        }
+    });
 }

@@ -1,8 +1,7 @@
+import fs from 'fs';
 const { search } = require('cerebro-tools');
-const fs = require('fs');
 
-module.exports = (dir, query) => {
-    // get all snippets
+export default (dir, query) => {
     let snippets = fs.readdirSync(dir, 'utf8');
 
     // remove .gitkeep from array
