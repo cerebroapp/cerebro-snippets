@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.2.1 (25/07/2022)
+### Fixed
+- Fix npm install unresolved peer dep electron 19.0.7
+
 ## v1.2.0 (25/07/2022)
 ### Added
 - Support cerebro 0.6.0
