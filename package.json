@@ -18,7 +18,8 @@
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
     "@electron/remote": "^2.0.8",
-    "electron": "^19.0.7"
+    "electron": "^19.0.7",
+    "husky": "8.0.1"
   },
   "main": "dist/index.js",
   "keywords": [
@@ -31,7 +32,8 @@
   "scripts": {
     "start": "cerebro-scripts start",
     "build": "cerebro-scripts build",
-    "test": "cerebro-scripts test"
+    "test": "cerebro-scripts test",
+    "prepare": "husky install"
   },
   "bugs": {
     "url": "https://github.com/puyt/cerebro-snippets/issues"
