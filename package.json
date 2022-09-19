@@ -3,7 +3,7 @@
   "version": "1.2.1",
   "description": "Cerebro plugin to create snippets",
   "license": "MIT",
-  "repository": "puyt/cerebro-snippets",
+  "repository": "cerebroapp/cerebro-snippets",
   "author": {
     "name": "Sven",
     "url": "https://github.com/puyt"
@@ -19,7 +19,7 @@
     "@commitlint/config-conventional": "17.1.0",
     "@electron/remote": "^2.0.8",
     "commitizen": "4.2.5",
-    "cz-conventional-changelog": "^3.3.0",
+    "cz-conventional-changelog": "3.3.0",
     "electron": "^19.0.7",
     "husky": "8.0.1"
   },
@@ -39,9 +39,9 @@
     "commit": "cz"
   },
   "bugs": {
-    "url": "https://github.com/puyt/cerebro-snippets/issues"
+    "url": "https://github.com/cerebroapp/cerebro-snippets/issues"
   },
-  "homepage": "https://github.com/puyt/cerebro-snippets#readme",
+  "homepage": "https://github.com/cerebroapp/cerebro-snippets#readme",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
