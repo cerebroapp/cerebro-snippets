@@ -1,6 +1,6 @@
 {
   "name": "cerebro-snippets",
-  "version": "1.2.1",
+  "version": "0.0.0-development",
   "description": "Cerebro plugin to create snippets",
   "license": "MIT",
   "repository": "cerebroapp/cerebro-snippets",
@@ -21,7 +21,8 @@
     "commitizen": "4.2.5",
     "cz-conventional-changelog": "3.3.0",
     "electron": "^19.0.7",
-    "husky": "8.0.1"
+    "husky": "8.0.1",
+    "semantic-release": "19.0.5"
   },
   "main": "dist/index.js",
   "keywords": [
@@ -36,7 +37,8 @@
     "build": "cerebro-scripts build",
     "test": "cerebro-scripts test",
     "prepare": "husky install",
-    "commit": "cz"
+    "commit": "cz",
+    "semantic-release": "semantic-release"
   },
   "bugs": {
     "url": "https://github.com/cerebroapp/cerebro-snippets/issues"
