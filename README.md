@@ -1,10 +1,10 @@
-# cerebro-snippets
+# cerebro-snippets [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 > [Cerebro](https://www.cerebroapp.com) plugin to create snippets
 
-![](screenshot1.gif)
+![plugin ussage gif](screenshot1.gif)
 
-![](screenshot2.gif)
+![plugin ussage gif 2](screenshot2.gif)
 
 ## Usage
 

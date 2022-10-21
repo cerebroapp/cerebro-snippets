@@ -1,9 +1,9 @@
 {
-  "name": "cerebro-snippets",
-  "version": "1.2.1",
+  "name": "@cerebroapp/cerebro-snippets",
+  "version": "0.0.0-development",
   "description": "Cerebro plugin to create snippets",
   "license": "MIT",
-  "repository": "puyt/cerebro-snippets",
+  "repository": "cerebroapp/cerebro-snippets",
   "author": {
     "name": "Sven",
     "url": "https://github.com/puyt"
@@ -15,8 +15,14 @@
   },
   "devDependencies": {
     "@cerebroapp/cerebro-scripts": "^1.0.0-alpha.6",
+    "@commitlint/cli": "17.1.2",
+    "@commitlint/config-conventional": "17.1.0",
     "@electron/remote": "^2.0.8",
-    "electron": "^19.0.7"
+    "commitizen": "4.2.5",
+    "cz-conventional-changelog": "3.3.0",
+    "electron": "^19.0.7",
+    "husky": "8.0.1",
+    "semantic-release": "19.0.5"
   },
   "main": "dist/index.js",
   "keywords": [
@@ -29,10 +35,21 @@
   "scripts": {
     "start": "cerebro-scripts start",
     "build": "cerebro-scripts build",
-    "test": "cerebro-scripts test"
+    "test": "cerebro-scripts test",
+    "prepare": "husky install",
+    "commit": "cz",
+    "semantic-release": "semantic-release"
   },
   "bugs": {
-    "url": "https://github.com/puyt/cerebro-snippets/issues"
+    "url": "https://github.com/cerebroapp/cerebro-snippets/issues"
   },
-  "homepage": "https://github.com/puyt/cerebro-snippets#readme"
+  "homepage": "https://github.com/cerebroapp/cerebro-snippets#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
